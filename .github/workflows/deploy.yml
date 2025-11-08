@@ -17,10 +17,10 @@ jobs:
         uses: oven-sh/setup-bun@v1
 
       - name: Install dependencies
-        uses: bun install
+        run: bun install
 
       - name: Build Gateway
-        uses: bun build src/index.ts --outdir dist
+        run: bun build src/index.ts --outdir dist
 
       - name: Deploy to Render
         uses: |
