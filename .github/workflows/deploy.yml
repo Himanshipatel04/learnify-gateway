@@ -23,6 +23,6 @@ jobs:
         run: bun build src/index.ts --outdir dist
 
       - name: Deploy to Render
-        uses: |
+        run: |
           echo "Triggering deploy..."
           # curl -X POST ${{secrets.RENDER_DEPLOY_HOOK}}
